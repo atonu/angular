@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from '../car';
 import { CARS } from '../mock-cars';
-import { HeroService } from '../car.service';
 
 @Component({
   selector: 'app-car',
