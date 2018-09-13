@@ -1,0 +1,34 @@
+<!-- <h2>{{car.name | uppercase}}</h2>
+<div><span>id: </span>{{car.id}}</div>
+<div><span>name: </span>{{car.name}}</div>
+
+<div>
+	<label>name:
+		<input [(ngModel)]="car.name" placeholder="name">		
+	</label>
+</div> -->
+<div>
+<h2>Car List</h2>
+<ul class="cars pull-right">
+
+  
+  <li *ngFor="let car of cars"
+  [class.selected]="car === selectedCar"
+  (click)="onSelect(car)">
+    <span class="badge">{{car.id}}</span> {{car.name}}
+  </li>
+</ul>
+
+<app-car-detail [car]="selectedCar"></app-car-detail>
+
+<!-- <div *ngIf="selectedCar">
+		<h2>{{selectedCar.name | uppercase}} <br>Details</h2>
+		<div><span>id: </span>{{selectedCar.id}}</div>
+		<div>
+		  <label>name:
+		    <input [(ngModel)]="selectedCar.name" placeholder="name">
+		  </label>
+		</div>
+</div>
+ -->
+
